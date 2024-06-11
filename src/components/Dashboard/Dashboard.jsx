@@ -2,9 +2,9 @@
 
 const Dashboard = () => {
     return (
-        <div>
-            <h1>fashBoard here</h1>
-        </div>
+      <div>
+        <h1>Hello Ibrahim , Welcome to your Dashboard</h1>
+      </div>
     );
 };
 
