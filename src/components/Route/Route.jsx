@@ -10,6 +10,7 @@ import Phones from "../Phones/Phones";
 import SignIn from "../SignIn/SignIn";
 import SignUp from "../SignUp/SignUp";
 import Phone from "../Phones/Phone";
+import MyCart from "../Mycart/MyCart";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
         path: "/phone/:id",
         element: <Phone></Phone>,
         loader: () => fetch("/public/phones.json"),
+      },
+      {
+        path: "/mycart",
+        element: <MyCart></MyCart>,
       },
       {
         path: "/signin",
