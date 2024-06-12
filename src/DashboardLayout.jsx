@@ -33,6 +33,9 @@ const DashboardLayout = () => {
                 <li>
                   <Link to={"/"}>Edit Profile</Link>
                 </li>
+                <li>
+                  <Link to={"/mycart"}>My Cart</Link>
+                </li>
               </ul>
             </div>
           </div>

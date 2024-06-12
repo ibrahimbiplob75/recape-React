@@ -6,6 +6,10 @@ import Dashboard from "../Dashboard/Dashboard";
 import ProductDetails from "../products/ProductDetails";
 import Profile from "../Dashboard/Profile";
 import DashboardLayout from "../../DashboardLayout";
+import Phones from "../Phones/Phones";
+import SignIn from "../SignIn/SignIn";
+import SignUp from "../SignUp/SignUp";
+import Phone from "../Phones/Phone";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +30,24 @@ const router = createBrowserRouter([
         element: <ProductDetails></ProductDetails>,
         loader: ({ params }) =>
           fetch(`https://dummyjson.com/products/${params.id}`),
+      },
+      {
+        path: "/phones",
+        element: <Phones></Phones>,
+        loader: () => fetch("/public/phones.json"),
+      },
+      {
+        path: "/phone/:id",
+        element: <Phone></Phone>,
+        loader: () => fetch("/public/phones.json"),
+      },
+      {
+        path: "/signin",
+        element: <SignIn></SignIn>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
       {
         path: "/dashboard",

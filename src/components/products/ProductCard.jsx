@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const ProductCard = ({product}) => {
-    const {id,title,description,images}=product
+    const {id,title,description,images,price}=product
     const handleCart=(id)=>{
         console.log(id)
     }
@@ -17,10 +17,10 @@ const ProductCard = ({product}) => {
                 alt="Shoes"
               />
             </figure>
-            <div className="card-body">
+            <div className="card-body text-left">
               <h2 className="card-title">
                 {title}
-                <div className="badge badge-secondary">NEW</div>
+                <div className="badge badge-secondary">{price}</div>
               </h2>
               <p>{description}</p>
               <div className="card-actions justify-end">
